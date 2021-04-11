@@ -1,5 +1,7 @@
 import app from './index'
-import { default as request } from 'supertest'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import request from 'supertest'
 
 it('should work', async function () {
     app.get('/', (req, res) => {

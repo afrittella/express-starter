@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import app from './application'
 
 app.get('/', (req, res) => {
