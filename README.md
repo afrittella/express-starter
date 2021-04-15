@@ -5,7 +5,7 @@ Express template with:
 - BodyParser
 - Jest / Supertest
 
-###Commands:
+### Commands:
 First copy **env_example** to **.env_local**.
 
 Then:
