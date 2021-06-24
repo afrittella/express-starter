@@ -1,11 +1,10 @@
 import express from 'express'
 import cors from 'cors'
-import bodyParser from 'body-parser'
 
 const app = express()
 
 app.use(cors())
 app.options('*', cors())
-app.use(bodyParser.json())
+app.use(express.json())
 
 export default app

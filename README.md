@@ -2,7 +2,6 @@ Express template with:
 - Typescript
 - ESLint / Prettier
 - CORS
-- BodyParser
 - Jest / Supertest
 
 ### Commands:
