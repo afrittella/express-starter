@@ -1,13 +1,16 @@
 {
   "name": "express-starter-template",
   "version": "1.0.0",
-  "description": "Simple express/cors/bodyparser/jest template with Typescript",
+  "description": "Simple express/cors/bodyparser/jest starter kit with Typescript",
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "eslint '*/**/*.{js,ts}' --fix",
     "build": "tsc",
-    "prestart": "npm run build",
-    "start": "env-cmd -f .env_local nodemon",
+    "watch": "tsc --watch",
+    "run:dev": "nodemon --config nodemon_dev.json",
+    "run:prod": "nodemon",
+    "start:dev": "env-cmd -f .env_local run-p watch run:dev",
+    "start:prod": "env-cmd -f .env_prod run-s build run:prod",
     "test": "env-cmd -f .env_test jest --colors --runInBand",
     "test:coverage": "env-cmd -f .env_test jest --coverage --colors --runInBand"
   },
@@ -23,7 +26,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "env-cmd": "^10.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",

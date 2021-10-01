@@ -3,7 +3,7 @@
 import app from './application'
 
 app.get('/', (req, res) => {
-    res.send('It works!')
+    res.send({ message: 'Seems working. :)' })
 })
 
 app.listen(process.env.PORT, () => {
