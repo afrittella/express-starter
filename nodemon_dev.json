@@ -1,6 +1,6 @@
 {
-  "watch": ["dist"],
-  "ext": "js",
-  "ignore": ["dist/**/*.spec.js", "dist/**/*.test.js"],
-  "exec": "node ./dist/index.js"
+    "execMap": {
+        "ts": "ts-node"
+    },
+    "ignore": ["*.{spec,test}.ts"]
 }
